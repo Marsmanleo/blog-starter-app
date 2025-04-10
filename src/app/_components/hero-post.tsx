@@ -22,24 +22,31 @@ export function HeroPost({
   slug,
 }: Props) {
   return (
-    <section>
-      <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+    <section className="neo-brutalism-blue p-6 mb-16">
+      <div className="mb-8">
+        <div className="neo-brutalism-white p-2">
+          <CoverImage title={title} src={coverImage} slug={slug} />
+        </div>
       </div>
-      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-20 md:mb-28">
+      <div className="md:grid md:grid-cols-2 md:gap-x-16 lg:gap-x-8 mb-8">
         <div>
-          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
-            <Link href={`/posts/${slug}`} className="hover:underline">
+          <h3 className="mb-4 text-4xl lg:text-5xl leading-tight font-bold">
+            <Link
+              href={`/posts/${slug}`}
+              className="hover:underline text-black"
+            >
               {title}
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
+          <div className="mb-4 md:mb-0 text-lg font-mono bg-white px-2 py-1 inline-block border-2 border-black">
             <DateFormatter dateString={date} />
           </div>
         </div>
-        <div>
+        <div className="neo-brutalism-white p-4">
           <p className="text-lg leading-relaxed mb-4">{excerpt}</p>
-          <Avatar name={author.name} picture={author.picture} />
+          <div className="neo-brutalism-pink p-2 inline-block">
+            <Avatar name={author.name} picture={author.picture} />
+          </div>
         </div>
       </div>
     </section>

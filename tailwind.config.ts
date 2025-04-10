@@ -37,8 +37,27 @@ const config: Config = {
         sm: "0 5px 10px rgba(0, 0, 0, 0.12)",
         md: "0 8px 30px rgba(0, 0, 0, 0.12)",
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            "h1, h2, h3": {
+              fontWeight: "700",
+            },
+            blockquote: {
+              borderLeft: "4px solid #000",
+              fontStyle: "normal",
+            },
+            a: {
+              color: "#3182ce",
+              "&:hover": {
+                color: "#2c5282",
+              },
+            },
+          },
+        },
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 };
 export default config;

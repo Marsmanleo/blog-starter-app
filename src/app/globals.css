@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-yellow-50;
+  }
+}
+
+@layer components {
+  .neo-brutalism-shadow {
+    @apply shadow-[5px_5px_0px_0px_rgba(0,0,0,1)];
+  }
+
+  .neo-brutalism-white {
+    @apply bg-white border-2 border-black rounded-lg neo-brutalism-shadow 
+    hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all;
+  }
+
+  .neo-brutalism-blue {
+    @apply bg-blue-400 border-2 border-black rounded-lg neo-brutalism-shadow 
+    hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all;
+  }
+
+  .neo-brutalism-pink {
+    @apply bg-pink-400 border-2 border-black rounded-lg neo-brutalism-shadow 
+    hover:translate-x-[3px] hover:translate-y-[3px] hover:shadow-none transition-all;
+  }
+}
